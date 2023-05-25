@@ -1,3 +1,11 @@
+/* colors */
+:root {
+    --header-gray: #E6E6E6;
+    --font-blue: #005677;
+    --font-white: white;
+    --titles-bgcolor: #C4C4C4;
+}
+
 /* body */
 body {
     font-family: 'Times New Roman', Times, serif;
@@ -11,52 +19,31 @@ body {
 
 /* header */
 header {
-    background-color: #E6E6E6;
+    background-color: var(--header-gray);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-header div {
+header div.img-container {
     padding: 25px;
     text-align: center;
 }
 
-header h1 {
+header h1, header h2 {
     margin: 0
 }
 
-/* footer */
-footer {
-    background-color: #005677;
-    color: white;
-    padding: 9px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
-    line-height: 84.69%;
+header h2 {
+    font-size: 25px;
     text-align: center;
 }
 
-/* general elements */
-h1, h2 {
-    color: #005677;
-    background-color: #C4C4C4;
-    padding: 10px;
-    line-height: 84.69%;
-    font-weight: 700;
-    letter-spacing: 0.4ch;
+header a {
+    color: var(--font-blue);
 }
 
-h1 {
-    text-align: center;
-}
-
-h2 {
-    font-size: 18px;
-}
-
+/* main */
 ul li span:first-child {
     font-weight: bold;
 }
@@ -77,6 +64,49 @@ section:not(#personal-data) ul {
     gap: 15px;
 }
 
+section#about-me p {
+    margin: 0
+}
+
+section#about-me ul {
+    background-color: var(--header-gray);
+    margin: 0 5% 0 5%;
+    text-align: justify;
+    padding: 25px;
+}
+
+/* footer */
+footer {
+    background-color: var(--font-blue);
+    color: var(--font-white);
+    padding: 9px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    line-height: 84.69%;
+    text-align: center;
+}
+
+/* general elements */
+h1, h2 {
+    color: var(--font-blue);
+    background-color: var(--titles-bgcolor);
+    padding: 10px;
+    line-height: 84.69%;
+    font-weight: 700;
+    letter-spacing: 0.4ch;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+
 a {
-    color: white;
+    color: var(--font-white);
 }
